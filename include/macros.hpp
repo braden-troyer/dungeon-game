@@ -1,3 +1,7 @@
+#ifndef MACROS_HPP_
+#define MACROS_HPP_
+
+
 #define SPRITE_HEIGHT 32
 #define SPRITE_WIDTH 32
 
@@ -7,3 +11,5 @@
 #define ROWS (int)(WINDOW_HEIGHT / SPRITE_HEIGHT)
 #define COLUMNS (int)(WINDOW_WIDTH / SPRITE_WIDTH)
 
+
+#endif

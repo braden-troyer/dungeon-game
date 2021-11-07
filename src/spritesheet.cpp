@@ -7,7 +7,7 @@ SpriteSheet::SpriteSheet(std::string s) {
     int rows = sheet_size.y / SPRITE_HEIGHT;
     int columns = sheet_size.x / SPRITE_WIDTH;
 
-    rectSprite = sf::IntRect(0, 0, SPRITE_WIDTH - 1, SPRITE_HEIGHT - 1);
+    rectSprite = sf::IntRect(0, 0, SPRITE_WIDTH, SPRITE_HEIGHT);
 
     sf::Sprite tmp(sheet, rectSprite);
 

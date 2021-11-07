@@ -5,7 +5,7 @@
 
 class Slime : public Entity {
 public:
-    Slime();
+    Slime(sf::Vector2f position);
 };
 
 #endif

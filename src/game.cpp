@@ -4,22 +4,21 @@
 Game::Game() : 
     mWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Dungeon-Game"), 
     mPlayer(), 
-    player(), 
-    spritesheetb("resources/Wall_Floor_Spritesheet.png"),   
-    background(spritesheetb.sprite_list[1][1]) 
+    player(sf::Vector2f(95.f, 95.f)), 
+    spritesheetb("resources/Wall_Floor_Spritesheet.png"),
+    background(spritesheetb)
 {
-    
 }
 
 void Game::run() {
     sf::Clock clock;
-    sf::Time t1, t2;
+    sf::Time current_time, set_time;
     clock.restart();
-    t1 = clock.getElapsedTime();
-    t2 = t1 + sf::milliseconds(10);
+    current_time = clock.getElapsedTime();
+    set_time = sf::milliseconds(16);
     while (mWindow.isOpen()) {
-        t1 = clock.getElapsedTime();
-        if (t1 > t2)
+        current_time = clock.getElapsedTime();
+        if (current_time > set_time)
         {
             processEvents();
             update();
